@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+
+class Rectangle {
+public:
+    
+    double length;
+    double width;
+
+    
+    Rectangle(double l, double w) {
+        length = l;
+        width = w;
+    }
+
+    
+    double getArea() {
+        return length * width;
+    }
+
+   
+    double getPerimeter() {
+        return 2 * (length + width);
+    }
+
+    
+    void display() {
+     
+        cout << "Rectangle with length " << length << " and width " << width << ":" << endl;
+        cout << "Area: " << getArea() << "cm squared  "<< endl;
+        cout << "Perimeter: " << getPerimeter()<< "cm "<< endl;
+    }
+};
+
+int main() {
+    double length, width;
+
+    cout << "welcome to basic calculation (input the two numbers separate then with a space): "<< endl;
+    cout << "Enter length and width for the first rectangle: ";
+    cin >> length >> width;
+    Rectangle rect1(length, width);
+    rect1.display();
+
+
+    cout << "Enter length and width for the second rectangle: ";
+    cin >> length >> width;
+    Rectangle rect2(length, width);
+    rect2.display();
+
+    return 0;
+}
